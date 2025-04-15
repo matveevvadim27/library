@@ -1,54 +1,60 @@
-# React + TypeScript + Vite
+**_Библиотека (Frontend Web Service)_**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+##
 
-Currently, two official plugins are available:
+**_Описание проекта_**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Данный проект представляет собой фронтенд веб-сервис "Библиотека" с ролевой системой. В зависимости от роли пользователи получают различные права доступа:
 
-## Expanding the ESLint configuration
+**_Администратор:_**
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Может добавлять, редактировать и удалять пользователей.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+**_Библиотекарь:_**
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Может добавлять и удалять книги.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+**_Клиент:_**
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+Может просматривать список книг;
+Искать книги по автору, жанру, издателю.
+
+#
+
+**_Технологии_**
+
+Для реализации проекта были использованы:
+
+**_React 19_** – библиотека для создания пользовательского интерфейса.
+
+**_React Router_** – для маршрутизации внутри приложения.
+
+**_SCSS.MODULE (BEM)_** – для стилизации и организации CSS-кода.
+
+**_CSS Grid / Flexbox_** – для построения адаптивных и удобных интерфейсов.
+
+**_React Toastify_** – для отображения уведомлений.
+
+**_Zustand_** - для более удобного и масштабируемого управления состоянием.
+
+**_TypeScript_** – для статической типизации и повышения надежности кода.
+
+**_Zod_** – для валидации данных и типизации схем.
+
+**_axios_** - для отправки HTTP-запросов к серверу и работы с API.
+
+**_frame-motion_** - для плавной анимации переключения форм.
+
+#
+
+**_Функционал_**
+
+Регистрация и авторизация пользователей с выбором роли.
+
+Управление пользователями (создание, редактирование, удаление) – только для администратора.
+
+Управление книгами (добавление, удаление) – для библиотекаря.
+
+Поиск книг по автору, жанру и издателю – для клиента.
+
+Интерактивные уведомления при выполнении действий.
