@@ -1,0 +1,35 @@
+@use "../../styles/helpers/" as *;
+
+.burger {
+  @include square(rem(48));
+  padding: rem(10);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: none;
+  z-index: 200;
+
+  &.isActive {
+    .burger__line {
+      &:first-child {
+        rotate: 45deg;
+        transform-origin: 0;
+        translate: 0.25em 0.18em;
+      }
+      &:nth-child(2) {
+        rotate: -45deg;
+      }
+      &:last-child {
+        width: 0;
+      }
+    }
+  }
+
+  &__line {
+    display: block;
+    width: 100%;
+    height: rem(2);
+    background-color: var(--color-text);
+    transition-duration: var(--td);
+  }
+}

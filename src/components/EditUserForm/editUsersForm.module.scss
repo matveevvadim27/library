@@ -1,0 +1,79 @@
+@use "../../styles/helpers/" as *;
+
+.edit {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: rem(30);
+  border: rem(1) solid var(--color-border);
+  padding: rem(30);
+  border-radius: rem(10);
+  box-shadow: 0px 0px 6px 0px var(--color-border);
+
+  @include laptop-xl {
+    max-width: rem(300);
+    margin-inline: auto;
+  }
+
+  &__wrapper {
+    display: flex;
+    gap: rem(30);
+    align-items: center;
+
+    @include laptop-xl {
+      flex-direction: column;
+    }
+  }
+  &__title {
+    @include laptop-xl {
+      text-align: center;
+    }
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    gap: rem(10);
+
+    @include laptop-xl {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: normal;
+    }
+  }
+
+  &__input {
+    padding: rem(10);
+    border: none;
+    outline: rem(1) solid var(--color-border);
+    border-radius: rem(5);
+
+    &:focus {
+      border: none;
+      outline: rem(1) solid var(--color-accent);
+      box-shadow: 0px 0px 6px 0px var(--color-border);
+    }
+  }
+
+  &__buttons {
+    margin-left: auto;
+    display: flex;
+    gap: rem(20);
+  }
+
+  &__confirm {
+    padding: rem(10);
+    border: none;
+    outline: rem(1) solid var(--color-accent);
+    border-radius: rem(10);
+  }
+
+  &__remove {
+    padding: rem(10);
+    border: none;
+    border-radius: rem(10);
+    background-color: var(--color-red);
+    color: var(--color-bg);
+  }
+}

@@ -1,0 +1,13 @@
+@use "../../styles/helpers/" as *;
+
+.home {
+  padding: rem(40);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__title {
+    text-align: center;
+  }
+}

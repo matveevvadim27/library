@@ -1,0 +1,43 @@
+@use "../../styles/helpers/" as *;
+
+.addBook {
+  width: 100%;
+  max-width: rem(400);
+  display: flex;
+  flex-direction: column;
+  gap: rem(30);
+  border: rem(1) solid var(--color-border);
+  padding: rem(50);
+  border-radius: rem(30);
+  box-shadow: 0px 0px 6px 0px var(--color-border);
+
+  &__title {
+    text-align: center;
+  }
+
+  &__input {
+    padding: rem(10);
+    border: none;
+    outline: rem(1) solid var(--color-border);
+    border-radius: rem(5);
+
+    &:focus {
+      border: none;
+      outline: rem(1) solid var(--color-accent);
+      box-shadow: 0px 0px 6px 0px var(--color-border);
+    }
+  }
+  &__btn {
+    padding: rem(10);
+    border: none;
+    outline: rem(1) solid var(--color-accent);
+    border-radius: rem(5);
+    transition-duration: 0.7s;
+
+    &:hover {
+      box-shadow: inset 0px -50px 0px 0px var(--color-accent);
+      transition-duration: 0.7s;
+      transform: scale(1);
+    }
+  }
+}

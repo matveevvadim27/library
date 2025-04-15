@@ -1,0 +1,50 @@
+@use "../../styles/helpers/" as *;
+
+.header {
+  @include fluid-text(18, 16);
+  padding: rem(20) rem(0);
+  border-bottom: rem(1) solid var(--color-border);
+
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: rem(100);
+  }
+
+  &__logo {
+    @include fluid-text(20, 16);
+
+    &:hover {
+      color: var(--color-accent);
+    }
+
+    @include tablet {
+      margin-right: auto;
+    }
+  }
+
+  &__overlay {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: rem(40);
+      background-color: var(--color-bg);
+      position: fixed;
+      inset: 0;
+      transition-duration: var(--td);
+      z-index: 100;
+
+      &:not(.isActive) {
+        @include visually-hidden;
+        translate: 100%;
+      }
+    }
+  }
+}

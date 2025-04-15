@@ -1,0 +1,63 @@
+@use "../../styles/helpers/" as *;
+
+.library {
+  padding: rem(40);
+  &__title {
+    text-align: center;
+  }
+  &__extra {
+    text-align: center;
+    margin-block: rem(20);
+  }
+
+  &__label {
+    @include fluid-text(20, 18);
+    font-weight: var(--fw-600);
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    gap: rem(20);
+  }
+
+  &__input {
+    @include fluid-text(18, 16);
+    font-weight: var(--fw-400);
+    padding: rem(10);
+    border-radius: rem(10);
+    outline: rem(1) solid var(--color-border);
+    border: none;
+
+    &:focus {
+      outline: rem(1) solid var(--color-accent);
+    }
+  }
+
+  &__empty {
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: rem(20);
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: rem(10);
+    border: rem(1) solid var(--color-border);
+    box-shadow: 0px 0px 6px 0px var(--color-border);
+    padding: rem(30);
+    border-radius: rem(20);
+  }
+
+  &__btn {
+    max-width: rem(100);
+    padding: rem(10);
+    border-radius: rem(10);
+    border: none;
+    background-color: var(--color-red);
+    color: var(--color-bg);
+  }
+}

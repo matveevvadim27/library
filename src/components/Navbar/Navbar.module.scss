@@ -1,0 +1,18 @@
+@use "../../styles/helpers/" as *;
+
+.menu {
+  &__list {
+    display: flex;
+    gap: rem(20);
+
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+  &__item {
+    &:hover {
+      color: var(--color-accent);
+      transition-duration: var(--td);
+    }
+  }
+}

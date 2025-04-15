@@ -1,0 +1,30 @@
+@use "./helpers/" as *;
+
+.container {
+  margin-inline: auto;
+  max-width: rem(1440);
+  padding-inline: rem(15);
+}
+.error {
+  color: red;
+}
+
+.loading {
+  text-align: center;
+}
+
+.visually-hidden {
+  @include visually-hidden;
+}
+
+.hidden-tablet {
+  @include tablet {
+    display: none !important;
+  }
+}
+
+.visible-tablet {
+  @include tablet-above {
+    display: none !important;
+  }
+}
